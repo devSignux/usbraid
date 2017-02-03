@@ -74,5 +74,13 @@ mount ext4 filesystem:
 mount /dev/mapper/luks /mnt
 </pre>
 
+reload after start:
+<pre>
+sudo mdadm --assemble --auto=yes --scan
+sudo cryptsetup luksOpen /dev/md0 luks
+sudo mount /dev/mapper/luks
+</pre>
+
+
 
  
